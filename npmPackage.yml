@@ -1,0 +1,58 @@
+parameters:
+
+- name: command
+  type: string
+  default: install
+
+- name: workingDir
+  type: string
+  default: $(System.DefaultWorkingDirectory)
+
+- name: customCommand
+  type: string
+  default: ''
+
+- name: verbose
+  type: boolean
+  default: false
+
+- name: publishPackageMetadata
+  type: boolean
+  default: true
+
+- name: customRegistry
+  type: string
+  default: useNpmrc
+
+- name: customFeed
+  type: string
+  default: ''
+
+- name: publishRegistry
+  type: string
+  default: useExternalRegistry
+
+- name: publishFeed
+  type: string
+  default: ''
+
+- name: publishEndpoint
+  type: string
+  default: ''
+
+steps:
+
+- task: Npm@1
+  inputs:
+    command: ${{parameters.command}}
+    workingDir: ${{parameters.workingDir}}
+    customCommand: ${{parameters.customCommand}}
+    verbose: ${{parameters.verbose}}
+    publishPackageMetadata: ${{parameters.publishPackageMetadata}}
+    customRegistry: ${{parameters.customRegistry}}
+    customFeed: ${{parameters.customFeed}}
+    customEndpoint: ${{parameters.customEndpoint}}
+    publishRegistry: ${{parameters.publishRegistry}}
+    publishFeed: ${{parameters.publishFeed}}
+    publishEndpoint: ${{parameters.publishEndpoint}}
+  displayName: "NPM Package Task"
