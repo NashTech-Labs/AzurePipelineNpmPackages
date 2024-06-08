@@ -29,7 +29,7 @@ To call this in your pipeline you can follow this example:
     repositories:
       - repository: Template
         type: github
-        name: NashTech-Labs/AdoAzureBlobStorage
+        name: NashTech-Labs/AzurePipelineNpmPackages
         ref: main
         endpoint: '<GitHubServiceConnection>'
 
