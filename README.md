@@ -1,4 +1,4 @@
-# Azure Pipeline for Uploading Files to Azure Blob Storage
+# Azure Pipeline for Installing Npm Packages
 
 This Azure Pipeline script is designed to to install and publish npm packages or to run an `npm` command. Supports `npmjs.com` and authenticated registries like Azure Artifacts.
 
